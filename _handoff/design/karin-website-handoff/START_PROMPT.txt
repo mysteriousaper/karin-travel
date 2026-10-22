@@ -1,0 +1,22 @@
+I'm building a full-stack website for Karin Travel, a travel agency in Yerevan. The design is already approved. Everything you need is in this folder:
+
+- BRIEF.md: requirements, design tokens, page structure, content rules and the definition of done. Treat it as the source of truth.
+- design/dusk-reference.html: the approved design as a working prototype. Open it in a browser and match it exactly on desktop and mobile.
+- design/dusk-source.dc.html: the raw markup and styles of the same design, for exact sizes, colors and copy.
+- design/screenshots/: desktop and mobile screenshots.
+- assets/images/: the photos to use (Unsplash, free for commercial use).
+
+Please:
+1. Read BRIEF.md fully and look at the reference and screenshots before writing any code.
+2. Propose a short plan: folder structure, data model (Prisma schema), routes and the order you'll build in. Wait for my OK.
+3. Then build it step by step:
+   a. project setup with design tokens
+   b. Home page pixel-matched to the reference, including the mobile menu and the mobile action bar
+   c. tours list and tour detail pages
+   d. enquiry modal + API + Telegram notification
+   e. admin panel
+   f. i18n (HY / RU / EN)
+   g. SEO and performance pass
+4. After each step, run it locally and check it at 1440px and 390px widths before moving on.
+
+I'm on Windows, so keep all scripts cross-platform. Never invent prices, reviews or license numbers: keep [placeholders] where the brief says so.

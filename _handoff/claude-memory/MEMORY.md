@@ -1,0 +1,2 @@
+- [Karin site project](karin-site-project.md) — stack, verified agency facts, placeholders still open
+- [Works autonomously](user-works-autonomously.md) — no clarifying questions; decide, verify, report

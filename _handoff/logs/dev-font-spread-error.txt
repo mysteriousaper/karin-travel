@@ -1,0 +1,34 @@
+Ошибка компиляции dev-сервера (21.10.2026), исправлена.
+Причина: next/font требует литеральные объекты опций; spread `{ ...common }` не поддерживается SWC-трансформом next/font.
+Исправление: в src/app/fonts.ts опции `display: 'swap', preload: false` прописаны в каждом вызове.
+
+Фрагмент лога (preview_logs):
+
+ ⨯ ./src/app/fonts.ts
+Error:   x Unexpected spread
+    ,-[C:\Users\user\Desktop\karin travel agency\src\app\fonts.ts:21:1]
+ 18 | // actually on screen, and only for the alphabets on the page (unicode-range).
+ 19 | const common = { display: 'swap' as const, preload: false };
+ 20 |
+ 21 | const manrope = Manrope({ ...common, subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500', '600', '700'], variable: '--f-manrope' });
+    :                           ^^^
+ (повторяется для каждого из 12 вызовов шрифтов)
+
+Import trace for requested module:
+./src/app/fonts.ts
+./src/app/[locale]/layout.tsx
+
+Симптом в браузере: навигация на http://localhost:3000 "denied or failed", curl висел (страница не компилировалась).
+
+---
+
+Ошибка гидрации (21.10.2026), исправлена:
+
+Uncaught Error: Hydration failed because the server rendered text didn't match the client.
+  <Price amount={980} base="USD">
+    <span className="tabular-nums">
++     354,000 ֏      (клиент, Chrome ICU hy-AM)
+-     354 000 ֏      (сервер, Node ICU hy-AM)
+
+Исправление: src/lib/money.ts → formatNumber() форматирует числа вручную
+(en: запятая; hy/ru: узкий неразрывный пробел U+202F, десятичная запятая).

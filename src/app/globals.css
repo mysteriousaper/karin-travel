@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Font pairings (see src/lib/font-pairings.ts) ------------------------ */
+:root,
+[data-font='dusk'] {
+  --font-body: var(--f-manrope), var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: var(--f-cormorant), var(--f-arm-serif), Georgia, serif;
+  --accent-scale: 1;
+}
+[data-font='google-sans'] {
+  --font-body: 'Google Sans', var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: 'Google Sans', var(--f-arm-sans), system-ui, sans-serif;
+  --accent-scale: 0.94;
+}
+[data-font='noto'] {
+  --font-body: var(--f-noto-sans), var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: var(--f-noto-serif), var(--f-arm-serif), Georgia, serif;
+  --accent-scale: 0.92;
+}
+[data-font='editorial'] {
+  --font-body: var(--f-inter), var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: var(--f-playfair), var(--f-arm-serif), Georgia, serif;
+  --accent-scale: 0.92;
+}
+[data-font='bold'] {
+  --font-body: var(--f-montserrat), var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: var(--f-lora), var(--f-arm-serif), Georgia, serif;
+  --accent-scale: 0.94;
+}
+[data-font='soft'] {
+  --font-body: var(--f-golos), var(--f-arm-sans), system-ui, sans-serif;
+  --font-accent: var(--f-literata), var(--f-arm-serif), Georgia, serif;
+  --accent-scale: 0.94;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16px;
+  }
+  body {
+    margin: 0;
+    background: #0f0f0e;
+    color: #f2eee7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  button {
+    cursor: pointer;
+  }
+  ::selection {
+    background: #f6d7a8;
+    color: #0f0f0e;
+  }
+  :focus-visible {
+    outline: 2px solid #e8a33d;
+    outline-offset: 3px;
+  }
+  /* Accent words: Cormorant italic for Latin/Cyrillic. Armenian falls back to
+     Noto Serif Armenian, which has no italic, so we let the browser slant it. */
+  .serif {
+    font-family: theme('fontFamily.serif');
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    /* Cormorant is small for its size; other accent fonts are scaled to match. */
+    font-size: calc(1em * var(--accent-scale));
+  }
+  /* The wordmark is the brand: always Cormorant, whatever pairing is active. */
+  .brand-serif {
+    font-family: var(--f-cormorant), Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  html[lang='hy'] .serif {
+    letter-spacing: -0.02em;
+  }
+  /* The design's tight negative tracking suits Latin letters but squeezes
+     Armenian words together, so Armenian headings get normal tracking and a
+     little extra space between words. */
+  html[lang='hy'] :is(h1, h2, h3) {
+    letter-spacing: 0 !important;
+    word-spacing: 0.12em;
+  }
+  html[lang='hy'] #book h2 {
+    font-weight: 500;
+    word-spacing: 0.18em;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .panel {
+    @apply mx-auto mt-4 max-w-page overflow-hidden rounded-panel ph:mt-2 ph:rounded-[24px];
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .field {
+    @apply block w-full rounded-2xl border border-line-2 bg-white px-4 text-[15px] text-ink placeholder:text-[#9A9184];
+    min-height: 50px;
+  }
+  .field:focus {
+    outline: none;
+    border-color: #0f0f0e;
+    box-shadow: 0 0 0 3px rgba(15, 15, 14, 0.08);
+  }
+  textarea.field {
+    @apply py-3;
+    min-height: 96px;
+    resize: vertical;
+  }
+  .label {
+    @apply mb-1.5 block text-[13px] font-semibold text-ink;
+  }
+}
+
+/* Armenian menu labels are much longer than English/Russian ones, so the
+   Armenian header switches to the compact (burger) layout below 1320px. */
+@media (max-width: 1320px) {
+  html[lang='hy'] .nav-main,
+  html[lang='hy'] .lang-seg,
+  html[lang='hy'] .cur-menu {
+    display: none;
+  }
+  html[lang='hy'] .nav-burger,
+  html[lang='hy'] .nav-drawer {
+    display: flex;
+  }
+  html[lang='hy'] .lang-compact {
+    display: block;
+  }
+}
+
+/* Destination strip in "How to book" — 28s linear loop. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-up {
+  animation: fade-up 600ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+dialog::backdrop {
+  background: rgba(10, 10, 9, 0.62);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+dialog[open] {
+  animation: fade-up 280ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* FAQ accordion marker */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .faq-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

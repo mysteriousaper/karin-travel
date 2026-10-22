@@ -1,0 +1,5 @@
+hy performance:74 accessibility:100 best-practices:100 seo:92 LCP 5.1 s TBT 210 ms
+en/tours/maldives performance:71 accessibility:96 best-practices:100 seo:100 LCP 4.4 s TBT 440 ms
+ru/services performance:68 accessibility:100 best-practices:100 seo:100 LCP 3.8 s TBT 200 ms
+
+[exited with code 0]

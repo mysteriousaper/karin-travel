@@ -1,0 +1,408 @@
+{
+  "meta": {
+    "siteName": "Karin Travel",
+    "homeTitle": "Karin Travel — tours, air tickets and visas from Yerevan",
+    "homeDescription": "Travel agency on Baghramyan 79, Yerevan. Maldives, Hurghada, Dubai, Prague and Europe: flights, hotels, visa support and social-package holidays in one message.",
+    "toursTitle": "Tours from Yerevan",
+    "toursDescription": "Beach holidays, European cities and day trips around Armenia, planned by Karin Travel in Yerevan.",
+    "servicesTitle": "Services: tours, air tickets, hotels, visas, social package",
+    "servicesDescription": "Tour packages, air tickets from Zvartnots, hotel booking, Schengen visa support and holidays paid with the state social package.",
+    "howTitle": "How to book a trip",
+    "howDescription": "Four steps from your first message to boarding. Answers to common questions about visas, payment and the social package.",
+    "contactsTitle": "Contacts",
+    "contactsDescription": "Karin Travel, Marshal Baghramyan Ave 79, Yerevan. Call 098 555 085 or 095 099 993, or write on WhatsApp and Instagram.",
+    "notFoundTitle": "Page not found"
+  },
+  "common": {
+    "skip": "Skip to content",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "instagram": "Instagram",
+    "call": "Call",
+    "callUs": "Call us",
+    "close": "Close",
+    "language": "Language",
+    "photosCredit": "Photos: Unsplash"
+  },
+  "nav": {
+    "home": "Home",
+    "tours": "Tours",
+    "services": "Services",
+    "howToBook": "How to book",
+    "stories": "Stories",
+    "contacts": "Contacts",
+    "bookNow": "Book now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "main": "Main",
+    "mobile": "Mobile menu",
+    "airHotelsVisas": "Air tickets, hotels & visas",
+    "socialPackage": "Social package"
+  },
+  "hero": {
+    "bookThisTrip": "Book this trip",
+    "whatsIncluded": "What's included",
+    "prev": "Previous trip",
+    "next": "Next trip",
+    "show": "Show {name}",
+    "region": "Featured trips",
+    "from": "from"
+  },
+  "home": {
+    "toursPill": "Our tours",
+    "toursH2a": "Every trip planned in Yerevan,",
+    "toursH2b": "from the flight",
+    "toursH2c": "to the last transfer.",
+    "tabsLabel": "Tour types",
+    "open": "Open {title}",
+    "allTours": "See all tours",
+    "storiesH2a": "Capture the trip,",
+    "storiesH2b": "not the paperwork",
+    "storiesIntro": "Every Karin package can include:",
+    "chips": [
+      "Flights from Zvartnots",
+      "Airport transfers",
+      "Hotel or resort",
+      "Visa documents",
+      "Travel insurance",
+      "Excursions"
+    ],
+    "seaplaneKicker": "Seaplane transfer",
+    "seaplaneTitle": "Arriving at your island, Maldives",
+    "seaplaneAlt": "Seaplane on a Maldives beach",
+    "reefAlt": "Coral reef in the Red Sea",
+    "play": "Play video highlights",
+    "videoTitle": "Video highlights",
+    "videoText": "Short reels from our travelers in Hurghada, Dubai and the Maldives — straight from @karin_travel.",
+    "watch": "Watch on Instagram",
+    "servicesPill": "What we do",
+    "servicesH2a": "Choose what you need,",
+    "servicesH2b": "we handle the rest",
+    "serviceGroup": "Service",
+    "bookH2": "How to book your trip",
+    "stepsTitle": "4 easy steps",
+    "stepsIntro": "Write to us, call {phone} or drop by Baghramyan 79 — whichever is easier.",
+    "steps": [
+      {
+        "title": "Choose a destination",
+        "text": "Pick a tour or tell us your dates and budget."
+      },
+      {
+        "title": "Get your offer",
+        "text": "Flight, hotel and total price in one message."
+      },
+      {
+        "title": "Visa & payment",
+        "text": "We prepare documents; pay a deposit or by social package."
+      },
+      {
+        "title": "Fly",
+        "text": "Tickets and vouchers on your phone, us on call."
+      }
+    ],
+    "marquee": [
+      "Maldives",
+      "Hurghada",
+      "Dubai",
+      "Prague",
+      "Germany",
+      "Santorini",
+      "Istanbul",
+      "Rome"
+    ]
+  },
+  "services": {
+    "tours": {
+      "name": "Tour packages",
+      "text": "Flight, hotel, transfers and excursions — one price, one contact.",
+      "cta": "See tours"
+    },
+    "air": {
+      "name": "Air tickets",
+      "text": "Any route from Yerevan. We find the fare and handle changes.",
+      "cta": "Ask for a fare"
+    },
+    "hotels": {
+      "name": "Hotels & visas",
+      "text": "Hotels worldwide and full visa support, including Schengen.",
+      "cta": "Get help"
+    },
+    "social": {
+      "name": "Social package",
+      "text": "Use your state social package to pay for a holiday.",
+      "cta": "Check options"
+    }
+  },
+  "categories": {
+    "all": "All",
+    "beach": "Beach",
+    "europe": "Europe",
+    "cities": "Cities",
+    "armenia": "Armenia"
+  },
+  "duration": {
+    "nights": "{count, plural, one {# night} other {# nights}}",
+    "days": "{count, plural, one {# day} other {# days}}"
+  },
+  "footer": {
+    "h2a": "Hot offers,",
+    "h2b": "before they're gone.",
+    "sub": "Last-minute seats and early-booking prices, once a week.",
+    "placeholder": "Phone or email",
+    "subscribe": "Subscribe",
+    "subscribing": "…",
+    "subscribed": "You're on the list. First offers arrive with the next mailing.",
+    "subError": "Enter a phone number or an e-mail address.",
+    "address": "Marshal Baghramyan Ave 79, Yerevan",
+    "tours": "Tours",
+    "air": "Air tickets",
+    "hotels": "Hotels",
+    "visa": "Visa support",
+    "social": "Social package",
+    "how": "How to book",
+    "contacts": "Contacts",
+    "rights": "© {year} Karin Travel · Photos: Unsplash"
+  },
+  "mbar": {
+    "group": "Quick contact",
+    "call": "Call {phone}",
+    "book": "Book a trip"
+  },
+  "enquiry": {
+    "title": "Book a trip",
+    "titleFor": "Ask about {name}",
+    "intro": "Leave your number — a manager will reply with dates, hotel options and the full price.",
+    "name": "Your name",
+    "phone": "Phone",
+    "phonePlaceholder": "+374 __ ___ ___",
+    "messenger": "How should we reach you?",
+    "dates": "Dates",
+    "datesPlaceholder": "e.g. mid-July, 7 nights",
+    "travelers": "Travelers",
+    "travelersPlaceholder": "2 adults, 1 child",
+    "message": "Anything else?",
+    "messagePlaceholder": "Budget, hotel wishes, questions",
+    "subject": "Trip",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "successTitle": "Request sent",
+    "successText": "We'll message you within [15 minutes] during working hours.",
+    "again": "Send another request",
+    "error": "Something went wrong. Please call us or write on WhatsApp.",
+    "required": "Required",
+    "invalidPhone": "Please enter a phone number we can reach",
+    "privacy": "We use your number only to answer this request.",
+    "kinds": {
+      "tour": "Tour package",
+      "air": "Air tickets",
+      "hotel": "Hotel booking",
+      "visa": "Visa support",
+      "social": "Social package",
+      "general": "General question"
+    },
+    "from": "From",
+    "fromPlaceholder": "Yerevan (EVN)",
+    "to": "To",
+    "toPlaceholder": "City or airport",
+    "departDate": "Departure",
+    "returnDate": "Return",
+    "oneWay": "One way",
+    "passengers": "Passengers",
+    "city": "City or resort",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "country": "Country",
+    "countryPlaceholder": "e.g. Germany, Czechia",
+    "travelDate": "Planned trip date",
+    "applicants": "Applicants",
+    "organization": "Where you work (optional)",
+    "destinationIdea": "Where would you like to go?"
+  },
+  "toursPage": {
+    "kicker": "Tours from Yerevan",
+    "title": "Pick a place,",
+    "accent": "we plan the rest",
+    "intro": "Every tour can be adjusted: other dates, another hotel, more nights. Prices are confirmed in your offer for the exact dates.",
+    "filters": "Filters",
+    "category": "Category",
+    "duration": "Duration",
+    "anyDuration": "Any length",
+    "short": "Up to 4 nights",
+    "medium": "5–7 nights",
+    "long": "8+ nights",
+    "price": "Price from",
+    "anyPrice": "Any price",
+    "under": "Up to {price}",
+    "onRequest": "Price on request",
+    "clear": "Reset",
+    "results": "{count, plural, one {# tour} other {# tours}}",
+    "empty": "No tours match these filters yet. Tell us what you're after and we'll build it.",
+    "custom": "Ask for a custom trip"
+  },
+  "tour": {
+    "from": "from",
+    "price": "[price]",
+    "included": "What's included",
+    "itinerary": "Day by day",
+    "day": "Day {n}",
+    "gallery": "Gallery",
+    "related": "You may also like",
+    "book": "Book this trip",
+    "ask": "Ask on WhatsApp",
+    "back": "All tours",
+    "formTitle": "Ask about this trip",
+    "formText": "Send your dates and number of travelers. We reply with flights, hotel options and a total price.",
+    "note": "The plan below is a typical itinerary. Days, hotels and excursions are adjusted to your dates.",
+    "photo": "Photo {n} of {title}"
+  },
+  "servicesPage": {
+    "kicker": "Services",
+    "title": "One agency,",
+    "accent": "every part of the trip",
+    "intro": "Take the whole package or only the piece you need. Each request goes straight to a manager at Baghramyan 79.",
+    "formTitle": "Send a request",
+    "items": {
+      "tours": {
+        "title": "Tour packages",
+        "lead": "Flight, hotel, transfers and excursions — one price, one contact.",
+        "points": [
+          "Charter and scheduled flights from Zvartnots",
+          "Hotels and resorts checked by our team",
+          "Airport transfers both ways",
+          "Excursions and travel insurance on request"
+        ]
+      },
+      "air": {
+        "title": "Air tickets",
+        "lead": "Any route from Yerevan. We find the fare and handle changes.",
+        "points": [
+          "Direct and connecting flights",
+          "Group and family bookings",
+          "Date changes and refunds handled for you",
+          "Baggage and seat options explained before you pay"
+        ]
+      },
+      "hotels": {
+        "title": "Hotel booking",
+        "lead": "City hotels, beach resorts and villas worldwide — booked and confirmed in your name.",
+        "points": [
+          "Vouchers sent to your phone",
+          "Board options: breakfast, half board, all-inclusive",
+          "Rooms for families and groups",
+          "Booking confirmation you can use for visa documents"
+        ]
+      },
+      "visa": {
+        "title": "Visa support",
+        "lead": "Schengen and other visas: we check the rules for your passport, prepare the documents and book the appointment.",
+        "points": [
+          "Document checklist for your case",
+          "Application forms filled in",
+          "Hotel and flight bookings for the file",
+          "Appointment booking and insurance"
+        ]
+      },
+      "social": {
+        "title": "Social package",
+        "lead": "If you work in the public sector and receive a state social package, you can use it to pay for a holiday with us.",
+        "points": [
+          "We tell you what the package can cover",
+          "We prepare the paperwork for your employer",
+          "Combine it with your own payment if the trip costs more",
+          "Works for tours abroad and in Armenia"
+        ]
+      }
+    }
+  },
+  "howPage": {
+    "kicker": "How to book",
+    "title": "From first message",
+    "accent": "to boarding",
+    "intro": "No forms to print and no queues. Most clients book through WhatsApp and drop by the office only to collect documents — or not at all.",
+    "faqTitle": "Questions we hear most",
+    "faq": [
+      {
+        "q": "How do I start?",
+        "a": "Send us a message on WhatsApp or Instagram, call 098 555 085, or fill in the request form on this site. Tell us where you want to go, your dates and how many people are travelling."
+      },
+      {
+        "q": "How quickly will I get an offer?",
+        "a": "During working hours a manager replies within [15 minutes]. For complex routes or groups we may need a little longer to compare flights and hotels."
+      },
+      {
+        "q": "Do flights leave from Yerevan?",
+        "a": "Yes. Our tours start at Zvartnots International Airport (EVN). We look at both direct and connecting flights and explain the difference in time and price."
+      },
+      {
+        "q": "Do you help with visas?",
+        "a": "Yes. We check what your passport needs for the destination, prepare the document list and the forms, and book the appointment. For Schengen countries we also provide the hotel and flight bookings for your file. The decision itself is always made by the embassy."
+      },
+      {
+        "q": "Can I pay with my social package?",
+        "a": "If you receive a state social package through your employer, it can be used to pay for a holiday. We explain what it covers and prepare the paperwork; any difference can be paid by you."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "You confirm the offer with a deposit and pay the rest before departure. The exact amounts and dates are written in your offer. You can pay at the office at Baghramyan 79."
+      },
+      {
+        "q": "Can I book only a ticket or only a hotel?",
+        "a": "Of course. Air tickets, hotel booking and visa support are all available on their own."
+      },
+      {
+        "q": "Do you organise trips inside Armenia?",
+        "a": "Yes — day trips to Khor Virap, Tatev, Etchmiadzin and northern Armenia, for families, friends and guests visiting from abroad."
+      }
+    ]
+  },
+  "contactsPage": {
+    "kicker": "Contacts",
+    "title": "Come by",
+    "accent": "Baghramyan 79",
+    "intro": "Write, call or visit the office in Arabkir. Most questions are answered in one message.",
+    "address": "Address",
+    "addressFull": "Marshal Baghramyan Ave 79, Arabkir, Yerevan 0033, Armenia",
+    "phones": "Phones",
+    "messengers": "Messengers",
+    "hours": "Opening hours",
+    "hoursValue": "[opening hours — to be confirmed]",
+    "map": "Map: Baghramyan 79, Yerevan",
+    "openMap": "Open in Google Maps",
+    "showMap": "Show the map",
+    "formTitle": "Or leave a request",
+    "instagram": "5,000+ followers on Instagram — reels from our travelers, offers and news.",
+    "itb": "We met hotel and airline partners at ITB Berlin 2025."
+  },
+  "notFound": {
+    "kicker": "404",
+    "title": "This page has",
+    "accent": "flown away",
+    "text": "The link may be old, or the trip is no longer on sale. Start from the tours or write to us.",
+    "home": "Back to home",
+    "tours": "See tours"
+  },
+  "video": {
+    "title": "Video highlights from @karin_travel",
+    "open": "Open on Instagram"
+  },
+  "currency": {
+    "label": "Currency",
+    "AMD": "Armenian dram",
+    "USD": "US dollar",
+    "EUR": "Euro",
+    "RUB": "Russian ruble",
+    "source": "Central Bank of Armenia rates, {date}",
+    "footer": "Prices converted at Central Bank of Armenia rates of {date}: 1 $ = {usd} ֏ · 1 € = {eur} ֏ · 1 ₽ = {rub} ֏. The final price is fixed in your offer.",
+    "perPerson": "per person"
+  },
+  "fonts": {
+    "button": "Fonts",
+    "title": "Font options",
+    "intro": "Preview each pairing on the live site. The choice is saved in this browser; set it for all visitors in Admin → Site settings.",
+    "sample": "Sunset at the",
+    "accent": "Pyramids",
+    "active": "Showing",
+    "reset": "Back to the site setting"
+  }
+}

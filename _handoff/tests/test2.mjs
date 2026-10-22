@@ -1,0 +1,21 @@
+import puppeteer from 'puppeteer-core';
+const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+const p = await b.newPage();
+const errs = []; p.on('pageerror', (e) => errs.push(e.message)); p.on('requestfailed', (r) => errs.push('FAIL ' + r.url().slice(-60)));
+await p.setViewport({ width: 1440, height: 900 });
+await p.goto('file:///C:/Users/user/Desktop/karin%20travel%20agency/Open%20Karin%20website%20(offline).html', { waitUntil: 'networkidle0' });
+await new Promise((r) => setTimeout(r, 4500));
+const r = await p.evaluate(async () => {
+  const imgs = () => [...document.querySelectorAll('#top > img')];
+  const loaded = imgs().map((i) => i.complete && i.naturalWidth > 0);
+  [...document.querySelectorAll('#top button')].find((x) => (x.getAttribute('aria-label') || '').includes('Պրահա')).click();
+  await new Promise((r) => setTimeout(r, 900));
+  return { loaded, shown: imgs().filter((i) => getComputedStyle(i).opacity === '1').map((i) => i.getAttribute('src')) };
+});
+console.log(JSON.stringify(r));
+await p.screenshot({ path: 'off2-hero.png' });
+await p.evaluate(() => document.getElementById('book').scrollIntoView());
+await new Promise((r) => setTimeout(r, 500));
+await p.screenshot({ path: 'off2-book.png' });
+console.log('errors', errs.length, errs.slice(0, 4));
+await b.close();

@@ -1,0 +1,65 @@
+import puppeteer from 'puppeteer-core';
+import { readFileSync } from 'node:fs';
+const env = readFileSync('C:/Users/user/Desktop/karin travel agency/.env', 'utf8');
+const get = (k) => env.match(new RegExp(`^${k}="?([^"\n]*)"?`, 'm'))[1];
+const O = 'http://localhost:3100';
+const b = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+const p = await b.newPage();
+const errs = [];
+p.on('response', (r) => r.status() >= 400 && console.log('HTTP', r.status(), r.url().replace(O, '')));
+p.on('pageerror', (e) => errs.push('PAGEERR ' + e.message.slice(0, 160)));
+p.on('console', (m) => m.type() === 'error' && errs.push('CONSOLE ' + m.text().slice(0, 160)));
+await p.setViewport({ width: 1440, height: 900 });
+
+// Public site
+await p.goto(O + '/hy', { waitUntil: 'networkidle0' });
+await new Promise((r) => setTimeout(r, 1500));
+const home = await p.evaluate(async () => {
+  const imgs = () => [...document.querySelectorAll('#top > img')];
+  const loaded = imgs().map((i) => i.complete && i.naturalWidth > 0).join(',');
+  [...document.querySelectorAll('#top button')].find((x) => (x.getAttribute('aria-label') || '').includes('Պրահա')).click();
+  await new Promise((r) => setTimeout(r, 900));
+  const shown = imgs().filter((i) => getComputedStyle(i).opacity === '1').map((i) => i.src.split('%2Fimages%2F')[1]?.slice(0, 12));
+  document.querySelector('.cur-menu button').click();
+  await new Promise((r) => setTimeout(r, 200));
+  [...document.querySelectorAll('.cur-menu button[aria-pressed]')][2].click();
+  await new Promise((r) => setTimeout(r, 200));
+  return { loaded, shown, price: [...document.querySelectorAll('#tours-panel .tabular-nums')].map((e) => e.textContent).join(' | ') };
+});
+console.log('home', JSON.stringify(home));
+await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle0' }), p.evaluate(() => [...document.querySelectorAll('.lang-seg a')][1].click())]);
+console.log('lang ->', p.url());
+await p.evaluate(() => [...document.querySelectorAll('button')].find((x) => x.textContent.trim() === 'Забронировать тур').click());
+await new Promise((r) => setTimeout(r, 400));
+await p.type('dialog[open] input[name=phone]', '+37498000001');
+await p.evaluate(() => document.querySelector('dialog[open] form').requestSubmit());
+await new Promise((r) => setTimeout(r, 1200));
+console.log('modal form:', await p.evaluate(() => document.querySelector('dialog[open] [role=status]')?.textContent.slice(0, 40)));
+
+// Admin: login, create tour with uploaded cover (sharp), view on site, delete
+await p.goto(O + '/admin/login', { waitUntil: 'networkidle0' });
+await p.type('#email', get('ADMIN_EMAIL'));
+await p.type('#password', get('ADMIN_PASSWORD'));
+await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle0' }), p.click('button[type=submit]')]);
+console.log('admin ->', p.url(), await p.$eval('h1', (h) => h.textContent));
+await p.goto(O + '/admin/tours/new', { waitUntil: 'networkidle0' });
+await p.type('#f-slug', 'upgrade-test');
+await p.evaluate(() => { for (const d of document.querySelectorAll('details')) d.open = true; });
+await p.type('input[name="en.title"]', 'Upgrade test tour');
+await p.type('input[name="en.summary"]', 'Created by the dependency upgrade check.');
+const file = await p.$('#f-coverFile');
+await file.uploadFile('C:/Users/user/Desktop/karin travel agency/public/images/tbilisi.jpg');
+await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle0' }), p.evaluate(() => [...document.querySelectorAll('button')].find((x) => x.textContent.trim() === 'Save tour').click())]);
+const cover = await p.$eval('#f-coverImage', (i) => i.value);
+console.log('saved ->', p.url().replace(O, ''), 'cover:', cover);
+const media = await p.evaluate(async (u) => { const r = await fetch(u); return r.status + ' ' + r.headers.get('content-type') + ' ' + (await r.arrayBuffer()).byteLength; }, cover);
+console.log('media:', media);
+await p.goto(O + '/en/tours/upgrade-test', { waitUntil: 'networkidle0' });
+console.log('public tour page:', await p.title(), '| hero img ok:', await p.evaluate(() => { const i = document.querySelector('section img'); return i.complete && i.naturalWidth > 0; }));
+await p.goto(O + '/admin/tours', { waitUntil: 'networkidle0' });
+const editHref = await p.evaluate(() => [...document.querySelectorAll('tr')].find((r) => r.textContent.includes('upgrade-test')).querySelector('a').getAttribute('href'));
+await p.goto(O + editHref, { waitUntil: 'networkidle0' });
+await Promise.all([p.waitForNavigation({ waitUntil: 'networkidle0' }), p.evaluate(() => [...document.querySelectorAll('button')].find((x) => x.textContent.includes('Delete this tour')).click())]);
+console.log('deleted ->', p.url().replace(O, ''), '| rows with upgrade-test:', await p.evaluate(() => [...document.querySelectorAll('tbody tr')].filter((r) => r.textContent.includes('upgrade-test')).length));
+console.log('errors:', errs.length, errs.slice(0, 6));
+await b.close();

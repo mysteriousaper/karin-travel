@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Karin Travel — Dusk</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@1,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0F0F0E}
+a{color:#F2EEE7}a:hover{color:#E8A33D}
+.k2 *{box-sizing:border-box}
+.k2 button{font:inherit;cursor:pointer}
+.k2 input{font:inherit}
+.k2 .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.k2-serif{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500}
+.k2-burger,.k2-mbar,.k2-drawer{display:none}
+@keyframes k2marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.k2-marq-in{display:flex;gap:28px;width:max-content;animation:k2marq 28s linear infinite}
+@media (prefers-reduced-motion:reduce){.k2-marq-in{animation:none}}
+@media (max-width:960px){
+.k2-nav{display:none !important}
+.k2-strip{display:none !important}
+.k2-h1{font-size:44px !important}
+.k2-h2{font-size:32px !important}
+.k2-big{font-size:46px !important}
+.k2-burger{display:flex}
+.k2-drawer{display:flex}
+}
+@media (max-width:700px){
+.k2{padding:8px 8px 96px !important}
+.k2-hero{min-height:calc(100svh - 120px) !important;border-radius:24px !important}
+.k2-hero header{padding:16px 16px !important}
+.k2-book-txt{display:none}
+.k2-hero-t{padding:28px 20px 0 !important}
+.k2-h1{font-size:40px !important;line-height:1.04 !important}
+.k2-hero-b{padding:0 20px 22px !important;gap:18px !important}
+.k2-hero-b p{display:none}
+.k2-sec{padding:44px 0 36px !important;border-radius:24px !important;margin-top:8px !important}
+.k2-pad{padding-left:20px !important;padding-right:20px !important}
+.k2-tabs{display:flex !important;flex-wrap:nowrap !important;justify-content:flex-start !important;overflow-x:auto;scrollbar-width:none;max-width:100%;padding:0 20px;box-sizing:border-box}
+.k2-tabs::-webkit-scrollbar,.k2-rail::-webkit-scrollbar{display:none}
+.k2-tabs button{flex:0 0 auto}
+.k2-rail{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;padding:0 20px !important;scrollbar-width:none;align-items:stretch !important}
+.k2-rail>*{flex:0 0 78%;scroll-snap-align:center}
+.k2-cimg{height:340px !important}
+.k2-stories{padding:36px 20px !important;gap:24px !important}
+.k2-stories .k2-tall{min-height:360px !important}
+.k2-steps{grid-template-columns:1fr !important}
+.k2-steps>div{border-right:0 !important;border-top:1px solid #D7D0C4;padding:22px 20px !important;display:grid;grid-template-columns:52px 1fr;column-gap:8px}
+.k2-steps>div>*{grid-column:2}
+.k2-steps>div>div:first-child{grid-column:1;grid-row:1 / span 2;font-size:22px !important}
+.k2-steps>div>div:nth-child(2){margin-top:0 !important}
+.k2-steps>div:first-child{display:block}
+.k2-book-h{padding:40px 20px 16px !important}
+.k2-marq{padding:14px 0 !important;font-size:19px !important}
+.k2-foot{padding:40px 20px 24px !important;border-radius:24px !important;margin-top:8px !important}
+.k2-mbar{display:flex;position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:30;gap:8px;padding:8px;border-radius:999px;background:rgba(20,19,18,0.92);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,0.35)}
+}
+</style>
+</helmet>
+<div class="k2" style="font-family:'Manrope',system-ui,sans-serif;color:#F2EEE7;background:#0F0F0E;padding:16px;min-height:100vh">
+
+<!-- HERO -->
+<section id="top" class="k2-hero" style="position:relative;max-width:1400px;margin:0 auto;border-radius:30px;overflow:hidden;min-height:780px;display:flex;flex-direction:column;background:#2A1C17">
+  <img class="ph" src="{{slide.img}}" alt="{{slide.name}}">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.1) 30%,rgba(0,0,0,0.15) 55%,rgba(0,0,0,0.7) 100%)"></div>
+
+  <header style="position:relative;display:flex;justify-content:space-between;align-items:center;padding:24px 28px;gap:16px">
+    <a href="#top" style="text-decoration:none"><span class="k2-serif" style="font-size:34px">Karin</span><span style="font-size:12px;letter-spacing:0.2em;margin-left:8px;opacity:0.8">TRAVEL</span></a>
+    <nav class="k2-nav" aria-label="Main" style="display:flex;gap:2px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:5px;backdrop-filter:blur(10px)">
+      <a href="#top" style="padding:9px 18px;border-radius:999px;background:#F2EEE7;color:#0F0F0E;text-decoration:none;font-size:14px;font-weight:600">Home</a>
+      <a href="#tours" style="padding:9px 18px;border-radius:999px;text-decoration:none;font-size:14px">Tours</a>
+      <a href="#packages" style="padding:9px 18px;border-radius:999px;text-decoration:none;font-size:14px">Services</a>
+      <a href="#book" style="padding:9px 18px;border-radius:999px;text-decoration:none;font-size:14px">How to book</a>
+      <a href="#stories" style="padding:9px 18px;border-radius:999px;text-decoration:none;font-size:14px">Stories</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+    <a href="#packages" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 6px 0 18px;border-radius:999px;background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.25);text-decoration:none;font-size:14px;font-weight:600;backdrop-filter:blur(10px)"><span class="k2-book-txt">Book now</span>
+      <span style="width:34px;height:34px;border-radius:999px;background:#F2EEE7;color:#0F0F0E;display:flex;align-items:center;justify-content:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    <button type="button" class="k2-burger" onClick="{{toggleMenu}}" aria-label="Open menu" aria-expanded="{{menuOpen}}" style="width:46px;height:46px;border-radius:999px;border:1px solid rgba(255,255,255,0.3);background:rgba(255,255,255,0.14);backdrop-filter:blur(10px);color:#F2EEE7;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
+    </div>
+  </header>
+  <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+    <nav class="k2-drawer" aria-label="Mobile menu" style="position:absolute;left:10px;right:10px;top:76px;z-index:20;flex-direction:column;gap:2px;padding:10px;border-radius:22px;background:rgba(20,19,18,0.94);backdrop-filter:blur(14px)">
+      <a href="#tours" onClick="{{closeMenu}}" style="display:flex;align-items:center;min-height:52px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px">Tours</a>
+      <a href="#packages" onClick="{{closeMenu}}" style="display:flex;align-items:center;min-height:52px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px">Air tickets, hotels &amp; visas</a>
+      <a href="#packages" onClick="{{closeMenu}}" style="display:flex;align-items:center;min-height:52px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px">Social package</a>
+      <a href="#book" onClick="{{closeMenu}}" style="display:flex;align-items:center;min-height:52px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px">How to book</a>
+      <a href="#stories" onClick="{{closeMenu}}" style="display:flex;align-items:center;min-height:52px;padding:0 16px;border-radius:14px;text-decoration:none;font-size:17px">Stories</a>
+      <div style="display:flex;gap:6px;padding:10px 6px 4px">
+        <button type="button" style="flex:1;min-height:44px;border-radius:999px;border:1px solid #F2EEE7;background:#F2EEE7;color:#0F0F0E;font-weight:600">HY</button>
+        <button type="button" style="flex:1;min-height:44px;border-radius:999px;border:1px solid #3A3733;background:transparent;color:#F2EEE7">RU</button>
+        <button type="button" style="flex:1;min-height:44px;border-radius:999px;border:1px solid #3A3733;background:transparent;color:#F2EEE7">EN</button>
+      </div>
+    </nav>
+  </sc-if>
+
+  <div class="k2-hero-t" style="position:relative;text-align:center;padding:40px 24px 0">
+    <span style="display:inline-block;padding:7px 16px;border-radius:999px;background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.25);backdrop-filter:blur(8px);font-size:13px">{{slide.kicker}}</span>
+    <h1 class="k2-h1" style="margin:20px auto 0;max-width:960px;font-size:84px;line-height:1;font-weight:300;letter-spacing:-0.035em;text-shadow:0 2px 30px rgba(0,0,0,0.25)">{{slide.title}} <span class="k2-serif" style="color:#F6D7A8">{{slide.accent}}</span></h1>
+  </div>
+
+  <div class="k2-hero-b" style="position:relative;margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:0 32px 32px;flex-wrap:wrap">
+    <div style="max-width:360px">
+      <div style="font-size:22px;font-weight:500;line-height:1.25">{{slide.name}}</div>
+      <div style="margin-top:4px;font-size:14px;color:#E4DDD2">{{slide.when}}</div>
+      <p style="margin:14px 0 0;font-size:14px;line-height:1.55;color:#E4DDD2">{{slide.text}}</p>
+      <div style="margin-top:18px;display:flex;gap:8px">
+        <a href="#packages" style="display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;background:#F2EEE7;color:#0F0F0E;text-decoration:none;font-size:14px;font-weight:600">Book this trip</a>
+        <a href="#tours" style="display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,0.4);text-decoration:none;font-size:14px">What's included</a>
+      </div>
+    </div>
+    <div style="flex:1 1 420px;max-width:740px;display:flex;flex-direction:column;gap:18px">
+      <div class="k2-strip" style="display:flex;gap:12px;justify-content:flex-end;align-items:flex-end">
+        <sc-for list="{{thumbs}}" as="th" hint-placeholder-count="4">
+          <button type="button" onClick="{{th.pick}}" aria-label="{{th.label}}" style="{{th.style}}">
+            <img class="ph" src="{{th.img}}" alt="">
+            <span aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,0.65))"></span>
+            <span style="position:absolute;left:12px;right:12px;bottom:12px;text-align:left;font-size:13px;font-weight:600;color:#fff">{{th.name}}</span>
+          </button>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="font-size:28px;font-weight:300">{{counter}}<span style="font-size:14px;color:#E4DDD2">/05</span></span>
+        <div style="flex:1;height:2px;background:rgba(255,255,255,0.3);position:relative"><div style="{{progress}}"></div></div>
+        <button type="button" onClick="{{prev}}" aria-label="Previous trip" style="width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,0.4);background:transparent;color:#F2EEE7;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" onClick="{{next}}" aria-label="Next trip" style="width:44px;height:44px;border-radius:999px;border:0;background:#F2EEE7;color:#0F0F0E;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS / TABS -->
+<section id="tours" class="k2-sec" style="max-width:1400px;margin:16px auto 0;background:#F2EEE7;color:#0F0F0E;border-radius:30px;padding:72px 0 56px;overflow:hidden">
+  <div style="text-align:center;padding:0 24px">
+    <span style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border-radius:999px;border:1px solid #D7D0C4;font-size:13px"><span style="width:24px;height:24px;border-radius:999px;background:#0F0F0E;color:#F2EEE7;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>Our tours</span>
+    <h2 class="k2-h2" style="margin:18px auto 0;max-width:760px;font-size:48px;line-height:1.08;letter-spacing:-0.03em;font-weight:500">Every trip planned in Yerevan, <span style="color:#857D70">from the flight</span> to the last transfer.</h2>
+    <div role="tablist" aria-label="Tour types" class="k2-tabs" style="margin-top:28px;display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:center">
+      <sc-for list="{{tabs}}" as="tb" hint-placeholder-count="4">
+        <button type="button" role="tab" aria-selected="{{tb.on}}" onClick="{{tb.pick}}" style="{{tb.style}}">{{tb.label}}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div class="k2-rail" style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:0 32px;align-items:end">
+    <sc-for list="{{cards}}" as="c" hint-placeholder-count="4">
+      <article style="display:flex;flex-direction:column;gap:12px">
+        <div class="k2-cimg" style="position:relative;height:{{c.h}};border-radius:22px;overflow:hidden;background:#D7D0C4">
+          <img class="ph" src="{{c.img}}" alt="{{c.title}}">
+          <span style="position:absolute;left:14px;top:14px;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,0.92);font-size:12px;font-weight:600">{{c.length}}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+          <div><h3 style="margin:0;font-size:17px;font-weight:600">{{c.title}}</h3><p style="margin:4px 0 0;font-size:13px;line-height:1.5;color:#5F584E">{{c.text}}</p></div>
+          <a href="#packages" aria-label="Open {{c.title}}" style="flex-shrink:0;width:44px;height:44px;border-radius:999px;border:1px solid #CFC7B9;display:flex;align-items:center;justify-content:center;color:#0F0F0E"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section id="stories" class="k2-sec k2-stories" style="max-width:1400px;margin:16px auto 0;background:#F2EEE7;color:#0F0F0E;border-radius:30px;padding:48px 40px;display:flex;gap:32px;flex-wrap:wrap">
+  <div style="flex:1 1 320px;display:flex;flex-direction:column;gap:24px">
+    <h2 class="k2-h2" style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-0.02em;font-weight:500">Capture the trip, <span style="color:#857D70">not the paperwork</span></h2>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#5F584E">Every Karin package can include:</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Flights from Zvartnots</span>
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Airport transfers</span>
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Hotel or resort</span>
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Visa documents</span>
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Travel insurance</span>
+      <span style="padding:8px 14px;border-radius:999px;border:1px solid #CFC7B9;font-size:13px">Excursions</span>
+    </div>
+    <figure style="margin:0;padding:22px;border-radius:20px;background:#FFFFFF">
+      <blockquote style="margin:0;font-size:16px;line-height:1.55">“Paste a real client review from Instagram here — one that mentions a specific moment of the trip.”</blockquote>
+      <figcaption style="margin-top:16px;font-size:14px"><b>[Client name]</b> <span style="color:#5F584E">· Maldives</span></figcaption>
+    </figure>
+  </div>
+  <div style="flex:2 1 520px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+    <div class="k2-tall" style="position:relative;min-height:420px;border-radius:22px;overflow:hidden">
+      <img class="ph" src="../assets/images/maldives-plane.jpg" alt="Seaplane on a Maldives beach">
+      <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,0.6))"></div>
+      <div style="position:absolute;left:20px;bottom:20px;color:#fff"><div style="font-size:12px;opacity:0.85">Seaplane transfer</div><div style="font-size:19px;font-weight:600">Arriving at your island, Maldives</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div style="position:relative;min-height:220px;border-radius:22px;overflow:hidden;display:flex;align-items:center;justify-content:center">
+        <img class="ph" src="../assets/images/hurghada-reef.jpg" alt="Coral reef in the Red Sea">
+        <button type="button" aria-label="Play video highlights" style="position:relative;width:60px;height:60px;border-radius:999px;border:0;background:#F2EEE7;color:#0F0F0E;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></button>
+      </div>
+      <div><div style="font-size:17px;font-weight:600">Video highlights</div><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:#5F584E">Short reels from our travelers in Hurghada, Dubai and the Maldives — straight from @karin_travel.</p></div>
+      <a href="https://www.instagram.com/karin_travel/" style="margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;min-height:50px;padding:0 6px 0 20px;border-radius:999px;border:1px solid #0F0F0E;color:#0F0F0E;text-decoration:none;font-size:14px;font-weight:600">Watch on Instagram<span style="width:38px;height:38px;border-radius:999px;background:#0F0F0E;color:#F2EEE7;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES / PACKAGES -->
+<section id="packages" class="k2-sec" style="max-width:1400px;margin:16px auto 0;background:#1A1918;border-radius:30px;padding:72px 32px">
+  <div class="k2-pad" style="text-align:center">
+    <span style="display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border-radius:999px;background:#F2EEE7;color:#0F0F0E;font-size:13px"><span style="width:24px;height:24px;border-radius:999px;background:#0F0F0E;color:#F2EEE7;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span>What we do</span>
+    <h2 class="k2-h2" style="margin:18px auto 0;max-width:680px;font-size:44px;line-height:1.1;letter-spacing:-0.03em;font-weight:500">Choose what you need, <span class="k2-serif" style="color:#F6D7A8">we handle the rest</span></h2>
+  </div>
+  <div role="radiogroup" aria-label="Service" class="k2-rail" style="margin:44px auto 0;max-width:1160px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+    <sc-for list="{{packs}}" as="p" hint-placeholder-count="4">
+      <button type="button" role="radio" aria-checked="{{p.on}}" onClick="{{p.pick}}" style="{{p.style}}">
+        <span style="position:relative;display:block;height:150px;border-radius:16px;overflow:hidden"><img class="ph" src="{{p.img}}" alt=""></span>
+        <span style="margin-top:20px;display:block;font-size:24px;font-weight:500;line-height:1.2">{{p.name}}</span>
+        <span style="margin-top:10px;display:block;font-size:14px;line-height:1.55;opacity:0.78">{{p.text}}</span>
+        <span style="margin-top:22px;display:flex;justify-content:space-between;align-items:center;min-height:46px;font-weight:600;font-size:14px;border-top:1px solid currentColor;padding-top:14px">{{p.cta}}<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </button>
+    </sc-for>
+  </div>
+</section>
+
+<!-- HOW TO BOOK -->
+<section id="book" class="k2-sec" style="max-width:1400px;margin:16px auto 0;background:#F2EEE7;color:#0F0F0E;border-radius:30px;overflow:hidden">
+  <div class="k2-book-h" style="padding:56px 32px 20px">
+    <h2 class="k2-big" style="margin:0;font-size:112px;line-height:0.95;letter-spacing:-0.045em;font-weight:600">How to book your trip</h2>
+  </div>
+  <div aria-hidden="true" class="k2-marq" style="white-space:nowrap;overflow:hidden;padding:18px 0;border-top:1px solid #D7D0C4;border-bottom:1px solid #D7D0C4;font-size:24px">
+    <div class="k2-marq-in"><span>Maldives</span><span style="color:#B2A998">+</span><span>Hurghada</span><span style="color:#B2A998">+</span><span>Dubai</span><span style="color:#B2A998">+</span><span>Prague</span><span style="color:#B2A998">+</span><span>Germany</span><span style="color:#B2A998">+</span><span>Santorini</span><span style="color:#B2A998">+</span><span>Istanbul</span><span style="color:#B2A998">+</span><span>Rome</span><span style="color:#B2A998">+</span><span>Maldives</span><span style="color:#B2A998">+</span><span>Hurghada</span><span style="color:#B2A998">+</span><span>Dubai</span><span style="color:#B2A998">+</span><span>Prague</span><span style="color:#B2A998">+</span><span>Germany</span><span style="color:#B2A998">+</span><span>Santorini</span><span style="color:#B2A998">+</span><span>Istanbul</span><span style="color:#B2A998">+</span><span>Rome</span><span style="color:#B2A998">+</span></div>
+  </div>
+  <div class="k2-steps" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+    <div style="padding:36px 32px;border-right:1px solid #D7D0C4">
+      <div style="font-size:24px;font-weight:600">4 easy steps</div>
+      <p style="margin:10px 0 0;font-size:14px;line-height:1.55;color:#5F584E">Write to us, call 098 555 085 or drop by Baghramyan 79 — whichever is easier.</p>
+    </div>
+    <div style="padding:36px 32px;border-right:1px solid #D7D0C4"><div style="font-size:28px;font-weight:600">01.</div><div style="margin-top:18px;font-size:17px;font-weight:600">Choose a destination</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#5F584E">Pick a tour or tell us your dates and budget.</p></div>
+    <div style="padding:36px 32px;border-right:1px solid #D7D0C4"><div style="font-size:28px;font-weight:600">02.</div><div style="margin-top:18px;font-size:17px;font-weight:600">Get your offer</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#5F584E">Flight, hotel and total price in one message.</p></div>
+    <div style="padding:36px 32px;border-right:1px solid #D7D0C4"><div style="font-size:28px;font-weight:600">03.</div><div style="margin-top:18px;font-size:17px;font-weight:600">Visa &amp; payment</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#5F584E">We prepare documents; pay a deposit or by social package.</p></div>
+    <div style="padding:36px 32px"><div style="font-size:28px;font-weight:600">04.</div><div style="margin-top:18px;font-size:17px;font-weight:600">Fly</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#5F584E">Tickets and vouchers on your phone, us on call.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="k2-foot" style="max-width:1400px;margin:16px auto 0;background:#1A1918;border-radius:30px;padding:56px 40px 28px">
+  <div style="display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-end">
+    <div style="max-width:560px">
+      <h2 class="k2-h2" style="margin:0;font-size:44px;line-height:1.1;letter-spacing:-0.03em;font-weight:400">Hot offers, <span class="k2-serif" style="color:#F6D7A8">before they're gone.</span></h2>
+      <p style="margin:12px 0 0;font-size:15px;color:#A8A196">Last-minute seats and early-booking prices, once a week.</p>
+    </div>
+    <form aria-label="Subscribe" style="flex:1 1 360px;max-width:480px;display:flex;gap:8px;flex-wrap:wrap">
+      <label style="flex:1 1 220px;display:flex"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Phone or email</span><input type="text" placeholder="Phone or email" style="width:100%;min-height:50px;padding:0 18px;border-radius:999px;border:1px solid #3A3733;background:#0F0F0E;color:#F2EEE7;font-size:15px"></label>
+      <button type="button" style="min-height:50px;padding:0 24px;border-radius:999px;border:0;background:#E8A33D;color:#0F0F0E;font-weight:700;font-size:14px">Subscribe</button>
+    </form>
+  </div>
+  <div style="margin-top:56px;padding-top:28px;border-top:1px solid #2C2A27;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;font-size:14px;color:#A8A196">
+    <div><span class="k2-serif" style="font-size:30px;color:#F2EEE7">Karin</span><p style="margin:8px 0 0;line-height:1.6">Marshal Baghramyan Ave 79, Yerevan<br>098 555 085 · 095 099 993</p></div>
+    <div style="display:flex;gap:48px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:10px"><a href="#tours">Tours</a><a href="#packages">Air tickets</a><a href="#packages">Hotels</a></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><a href="#packages">Visa support</a><a href="#packages">Social package</a><a href="#book">How to book</a></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><a href="https://www.instagram.com/karin_travel/">Instagram</a><a href="https://wa.me/37498555085">WhatsApp</a><a href="tel:+37495099993">Call us</a></div>
+    </div>
+  </div>
+  <div style="margin-top:28px;font-size:12px;color:#A8A196">© 2026 Karin Travel · Photos: Unsplash</div>
+</footer>
+
+<!-- MOBILE ACTION BAR -->
+<div class="k2-mbar" role="group" aria-label="Quick contact">
+  <a href="tel:+37498555085" aria-label="Call 098 555 085" style="width:48px;height:48px;flex-shrink:0;border-radius:999px;border:1px solid #3A3733;display:flex;align-items:center;justify-content:center;color:#F2EEE7"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg></a>
+  <a href="https://wa.me/37498555085" style="flex:1;min-height:48px;border-radius:999px;background:#25D366;color:#0B1F12;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;font-size:15px">WhatsApp</a>
+  <a href="#packages" style="flex:1;min-height:48px;border-radius:999px;background:#F2EEE7;color:#0F0F0E;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:15px">Book a trip</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.state || {};
+    const idx = s.idx || 0;
+    const tab = s.tab || 'Beach';
+    const pack = s.pack === undefined ? 0 : s.pack;
+    const B = '/_blob/';
+    const slides = [
+      { kicker: 'Egypt · Giza & Hurghada', title: 'Sunset at the', accent: 'Pyramids', name: 'Cairo & Hurghada combo', when: '8 nights · flights from Yerevan', text: 'Two days with the pyramids and the Sphinx, then a week of Red Sea reefs at an all-inclusive resort.', img: B + 'bbac9275c0cc5d55ab6d5a6265583416' },
+      { kicker: 'Maldives', title: 'Wake up', accent: 'above the lagoon', name: 'Maldives overwater villa', when: '7 nights · seaplane transfer', text: 'A villa on stilts over turquoise water, half board and a seaplane from Malé to your island.', img: B + 'c4090712bcd287bf253739f6fd658f36' },
+      { kicker: 'United Arab Emirates', title: 'Golden hour', accent: 'in Dubai', name: 'Dubai city & desert', when: '5 nights · 3h flight', text: 'Burj Khalifa at sunset, a desert safari evening and beach days on Jumeirah.', img: B + 'd745085f432e1e29e280c14e4775b574' },
+      { kicker: 'Czech Republic', title: 'Evenings on', accent: 'Charles Bridge', name: 'Prague old town', when: '5 nights · Schengen visa help', text: 'Castle views, old-town squares and Czech cafés — with your visa prepared by us.', img: B + '45b229061cf1ffff8c697a741941ccbc' },
+      { kicker: 'Greece', title: 'White walls,', accent: 'blue Aegean', name: 'Santorini, Oia', when: '6 nights · summer 2027', text: 'Cliffside hotel with a caldera view and the famous Oia sunset a short walk away.', img: B + '2fff76ae02d517aefa44298200728684' }
+    ];
+    const slide = slides[idx];
+    const go = (i) => this.setState({ idx: (i + slides.length) % slides.length });
+    const thumbs = [1, 2, 3, 4].map(k => {
+      const i = (idx + k) % slides.length;
+      const first = k === 1;
+      return { name: slides[i].name, img: slides[i].img, label: 'Show ' + slides[i].name, pick: () => go(i),
+        style: 'position:relative;flex-shrink:0;border:0;padding:0;border-radius:18px;overflow:hidden;background:#333;width:' + (first ? '230px' : '120px') + ';height:' + (first ? '210px' : '170px') + ';' + (first ? 'box-shadow:0 0 0 2px #F2EEE7' : '') };
+    });
+    const tabsList = ['Beach', 'Europe', 'Cities', 'Armenia'];
+    const data = {
+      'Beach': [
+        { title: 'Maldives', text: 'Overwater villas, seaplane transfer.', length: '7 nights', img: B + 'd9a5eb3583f58ecd845e11ed1e1a1d35' },
+        { title: 'Hurghada', text: 'All-inclusive on the Red Sea.', length: '7 nights', img: B + '04eb30edfa2f22676966417bca18fe4e' },
+        { title: 'Santorini', text: 'Caldera views and sunsets.', length: '6 nights', img: B + '2fff76ae02d517aefa44298200728684' },
+        { title: 'Bali', text: 'Rice terraces, temples, beaches.', length: '10 nights', img: B + '001bb401342eef90be212c1251ef02eb' }
+      ],
+      'Europe': [
+        { title: 'Prague', text: 'Old town, castle, river.', length: '5 nights', img: B + '49dc56bde933dc558c33a5888da54d8b' },
+        { title: 'Germany', text: 'Bavaria and Neuschwanstein.', length: '6 nights', img: B + 'ab1f31c23754683698202a8f39bc421e' },
+        { title: 'Rome', text: 'Colosseum, Vatican, Trevi.', length: '5 nights', img: B + '5590f0e4e027e5c154b58fdb98aa7441' },
+        { title: 'Swiss Alps', text: 'Lakes, trains, mountain villages.', length: '6 nights', img: B + 'be3ad2d3375f04410e26098a97f5228f' }
+      ],
+      'Cities': [
+        { title: 'Dubai', text: 'Skyline, malls, desert safari.', length: '5 nights', img: B + 'de8f44b74613d670a2aebce82c8d8305' },
+        { title: 'Istanbul', text: 'Bosphorus and the old city.', length: '4 nights', img: B + 'ccb6be2b714a7975cfeda45410cf9f42' },
+        { title: 'Paris', text: 'For two, with a Seine cruise.', length: '5 nights', img: B + 'd0b395da54bef8e88e3a4f82c7f66b37' },
+        { title: 'Tbilisi', text: 'A weekend next door.', length: '3 nights', img: B + '7a0a3fde404dd3c519a4a5a3c071aa62' }
+      ],
+      'Armenia': [
+        { title: 'Khor Virap', text: 'Ararat at its closest.', length: '1 day', img: B + '39fd2704e346239d62f7708f80fca2eb' },
+        { title: 'Tatev', text: 'Monastery above the gorge.', length: '1 day', img: B + '286873b5810d534744d67bb31a1f7ca2' },
+        { title: 'Etchmiadzin', text: 'The mother cathedral.', length: '1 day', img: B + '3b6f91ab8612c0d75c4e1668c7400b95' },
+        { title: 'Northern Armenia', text: 'Green gorges and villages.', length: '2 days', img: B + '86a55841b6eef618d375a3c8e149ce93' }
+      ]
+    };
+    const heights = ['310px', '370px', '330px', '390px'];
+    const packsRaw = [
+      { name: 'Tour packages', text: 'Flight, hotel, transfers and excursions — one price, one contact.', cta: 'See tours', img: B + '4720ca76945b6be9eaba595f565b5f3e' },
+      { name: 'Air tickets', text: 'Any route from Yerevan. We find the fare and handle changes.', cta: 'Ask for a fare', img: B + '613076ea5f4361a47d2cdfe46835a931' },
+      { name: 'Hotels & visas', text: 'Hotels worldwide and full visa support, including Schengen.', cta: 'Get help', img: B + 'e3a9f0225de0b57f68e31aaec7ced304' },
+      { name: 'Social package', text: 'Use your state social package to pay for a holiday.', cta: 'Check options', img: B + '1a3a9b3859b243d3b15d178245cbde80' }
+    ];
+    const menuOpen = !!s.menu;
+    return {
+      menuOpen,
+      toggleMenu: () => this.setState({ menu: !menuOpen }),
+      closeMenu: () => this.setState({ menu: false }),
+      slide,
+      counter: '0' + (idx + 1),
+      progress: 'position:absolute;left:0;top:-1px;height:4px;border-radius:4px;background:#F2EEE7;width:' + ((idx + 1) * 20) + '%',
+      prev: () => go(idx - 1),
+      next: () => go(idx + 1),
+      thumbs,
+      tabs: tabsList.map(t => ({ label: t, on: t === tab, pick: () => this.setState({ tab: t }), style: t === tab ? 'min-height:44px;padding:0 20px;border-radius:999px;border:0;background:#0F0F0E;color:#F2EEE7;font-size:14px;font-weight:600' : 'min-height:44px;padding:0 20px;border-radius:999px;border:0;background:#E5DFD4;color:#0F0F0E;font-size:14px' })),
+      cards: data[tab].map((c, i) => ({ ...c, h: heights[i] })),
+      packs: packsRaw.map((p, i) => ({ ...p, on: i === pack, pick: () => this.setState({ pack: i }), style: 'text-align:left;padding:14px 14px 22px;border-radius:24px;display:flex;flex-direction:column;' + (i === pack ? 'background:#F2EEE7;color:#0F0F0E;border:1px solid #F2EEE7' : 'background:#252321;color:#F2EEE7;border:1px solid #34312D') }))
+    };
+  }
+}
+</script>
+</body>
+</html>

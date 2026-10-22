@@ -1,0 +1,121 @@
+// Local development uses SQLite. For production switch `provider` to
+// "postgresql" and point DATABASE_URL at Neon / Supabase (see README).
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Tour {
+  id           String            @id @default(cuid())
+  slug         String            @unique
+  category     String // beach | europe | cities | armenia
+  duration     Int // number of nights (or days when durationUnit = "days")
+  durationUnit String            @default("nights")
+  priceFrom    Int? // null = shown as [price]
+  currency     String            @default("USD") // USD | AMD
+  badge        String?
+  coverImage   String
+  gallery      String            @default("[]") // JSON string[]
+  featured     Boolean           @default(false)
+  published    Boolean           @default(true)
+  sortOrder    Int               @default(0)
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+  translations TourTranslation[]
+  slides       HeroSlide[]
+}
+
+model TourTranslation {
+  id          String @id @default(cuid())
+  tourId      String
+  locale      String
+  title       String
+  summary     String // one line on cards
+  description String @default("")
+  included    String @default("[]") // JSON string[]
+  itinerary   String @default("[]") // JSON {title, text}[]
+  tour        Tour   @relation(fields: [tourId], references: [id], onDelete: Cascade)
+
+  @@unique([tourId, locale])
+}
+
+model HeroSlide {
+  id           String                 @id @default(cuid())
+  image        String
+  tourId       String?
+  tour         Tour?                  @relation(fields: [tourId], references: [id], onDelete: SetNull)
+  active       Boolean                @default(true)
+  sortOrder    Int                    @default(0)
+  translations HeroSlideTranslation[]
+}
+
+model HeroSlideTranslation {
+  id      String    @id @default(cuid())
+  slideId String
+  locale  String
+  kicker  String
+  title   String
+  accent  String
+  name    String
+  when    String
+  text    String
+  slide   HeroSlide @relation(fields: [slideId], references: [id], onDelete: Cascade)
+
+  @@unique([slideId, locale])
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  name      String
+  phone     String
+  messenger String   @default("whatsapp") // whatsapp | telegram | call
+  dates     String?
+  travelers String?
+  message   String?
+  kind      String   @default("tour") // tour | air | hotel | visa | social | general
+  tourSlug  String?
+  tourTitle String?
+  details   String   @default("{}") // JSON of service-specific fields
+  locale    String   @default("hy")
+  source    String? // page the form was sent from
+  status    String   @default("new") // new | in_progress | done
+  notified  Boolean  @default(false)
+}
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  contact   String   @unique
+  locale    String   @default("hy")
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  place     String   @default("")
+  text      String
+  locale    String   @default("all") // all | hy | ru | en
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  key   String @id
+  value String
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  filename  String
+  mime      String
+  width     Int?
+  height    Int?
+  data      Bytes
+  createdAt DateTime @default(now())
+}

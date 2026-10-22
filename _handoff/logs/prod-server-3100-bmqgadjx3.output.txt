@@ -1,0 +1,8 @@
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3100
+   - Network:      http://192.168.101.16:3100
+
+ ✓ Starting...
+ ✓ Ready in 1033ms
+
+[exited with code 1]
